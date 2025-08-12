@@ -1,0 +1,107 @@
+/* Content Sections */
+        .content-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px 60px;
+        }
+
+        .content-section {
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            margin: 40px 0;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .content-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+        }
+
+        @keyframes slideInUp {
+            from { 
+                opacity: 0; 
+                transform: translateY(30px); 
+            }
+            to { 
+                opacity: 1; 
+                transform: translateY(0); 
+            }
+        }
+
+        .section-title {
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            color: #1e3c72;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            border-radius: 2px;
+        }
+
+        /* Cards */
+        .card {
+            background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+            padding: 30px;
+            margin: 25px 0;
+            border-radius: 15px;
+            border: 1px solid rgba(30, 60, 114, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            transform: scaleY(0);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(30, 60, 114, 0.15);
+        }
+
+        .card:hover::before {
+            transform: scaleY(1);
+        }
+
+        .card h3 {
+            color: #1e3c72;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+
+        .card .date {
+            color: #2a5298;
+            font-weight: bold;
+            margin-bottom: 15px;
+            font-size: 0.95em;
+        }
+
+        .card p {
+            color: #666;
+            line-height: 1.7;
+        }

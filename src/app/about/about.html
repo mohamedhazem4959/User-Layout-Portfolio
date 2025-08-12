@@ -1,0 +1,24 @@
+<!-- Content Sections -->
+        <div class="content-wrapper">
+            <section id="about" class="content-section">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-intro">
+                   {{about?.bio}}
+                </div>
+                <div class="card">
+                    <h3>My Philosophy</h3>
+                    <p>{{about?.MyPhilosophy}}</p>
+                </div>
+                <div class="card">
+                    <h3>What I Do</h3>
+                    <p>I specialize in building robust server-side applications, designing scalable architectures, and optimizing database performance. Whether it's creating RESTful APIs, implementing microservices, or setting up CI/CD pipelines, I ensure that every solution is built to scale and perform under pressure.</p>
+                </div>
+                <h3 style="color: #1e3c72; margin: 40px 0 20px 0; font-size: 1.3em;">Skills</h3>
+                <div class="skills-grid">
+                    
+                    <span class="skill-tag" *ngFor="let skill of about?.skills">
+                        {{skill.title}}
+                    </span>
+                </div>
+            </section>
+        </div>

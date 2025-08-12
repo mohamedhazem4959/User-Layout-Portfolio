@@ -1,0 +1,70 @@
+.header-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            padding: 0;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #1e3c72;
+            padding: 15px 0;
+        }
+
+        .nav-tabs {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-tabs li {
+            margin: 0 5px;
+        }
+
+        .nav-tabs a {
+            display: block;
+            padding: 20px 25px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .nav-tabs a:hover {
+            color: #1e3c72;
+            background: rgba(30, 60, 114, 0.1);
+        }
+
+        .nav-tabs a.active {
+            color: #1e3c72;
+            background: rgba(30, 60, 114, 0.15);
+            font-weight: 700;
+        }
+
+        .nav-tabs a.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30px;
+            height: 3px;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            border-radius: 2px;
+        }
